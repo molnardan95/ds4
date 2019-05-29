@@ -38,11 +38,14 @@ for (i in 1970:2018) {
   
   toplist <- bind_rows(toplist, yearly_toplist)
   
-  print(url)
   Sys.sleep(sample(seq(2, 5, by=0.001), 1))
 }
 
 # Some data cleaning is required to use the genius package
+# Even though I did some data cleaning, due to the nature of the data,
+# It is hard to download every song's lyrics automatically
+
+# This method below will load more than 80% of songs from this period
 
 clean_toplist <- toplist %>%
   mutate(Title = str_remove_all(Title, "[',().&]")) %>%
@@ -90,9 +93,14 @@ difference <- dist_toplist %>%
   anti_join(dist_lyrics)
 difference
 
+# In the end, we will have around a 100 songs that we were unable to capture
+# This shouldn't cause big issues for the main purpose of our analysis, as we still have more than 700 available.
+
 rm(list = setdiff(ls(), "tokenized_lyrics"))
 
 # Feature Engineering -----------------------------------------------------------
+
+# I decided to save the working file, and load it after 
 tokenized_lyrics <- read.csv("Billboard_1970_2018_Tokenized_Lyrics.csv")
 tokenized_lyrics <- tokenized_lyrics %>% na.omit()
 
@@ -102,6 +110,7 @@ tokenized_lyrics <- tokenized_lyrics %>%
                          ifelse(year >= 2000, "2000s",
                                 ifelse(year >=1990, "1990s",
                                        ifelse(year >= 1980, "1980s", "1970s")))))
+
 
 
 tokenized_lyrics %>% 
