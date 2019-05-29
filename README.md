@@ -27,7 +27,7 @@ These are the questions that I would like to answer using the methods I acquired
 
 The dataset I use to answer these questions is all the lyrics from the songs that lead for at least a week the Billboard Hot 100 music toplist from 1970 to 2018. 
 
-This information is sourced from two different websites. One of them is the [Billboard](https://www.billboard.com/charts/hot-100) website itself, from where I get the archives of the Top 100 chart going back until 1970. The other one is [Genius](https://genius.com/), source of music related news and lyrics. 
+This information is sourced from two different websites. One of them is the [Billboard](https://www.billboard.com/charts/hot-100) website itself, from where I get the archives of the Hot 100 chart going back until 1970. The other one is [Genius](https://genius.com/), source of music related news and lyrics. 
 
 Due to the nature of these songs - one can have multiple artists, the name of the songs or artists can be challenging to interpret -, I was unable to automatically pull the lyrics for each and every song, however most of the data I needed to work with was relatively easy to get. 
 
@@ -38,4 +38,14 @@ Before pulling the lyrics for the songs however, I made sure to select the disti
 What made this analysis possible was the mostly used text analysis packages, such as the `stringr`, `tidyr`, `tidytext`, `wordcloud` and `dplyr` packages, and some other ones that are used by most of the data science projects nowadays, such as `ggplot2`, `data.table`, `tibble` and such. 
 
 Also, the [genius](https://github.com/josiahparry/genius) package created by JosiahParry was very useful in extracting lyrics for the songs. The package had some limitations, but I was able to work with it successfully.
+
+## Term Frequency Analysis
+
+In my analysis I focus on the most popular words used in the most popular songs, and try to come to a conclusion on some trends and topics that are either very distinguisable from each other or are used in almost all the examined songs. 
+
+The first step of this process is looking at the words which were used the most.
+
+
+
+
 
