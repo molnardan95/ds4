@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1558986877358.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "81B76C97",
+    "lastKnownWriteTime" : 7306087011111759983,
+    "last_content_update" : 1558986877358,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "78111BF4",
+        "caption" : "lyric_words",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=lyric_words&cache_key=78111BF4",
+        "displayedObservations" : 15337,
+        "environment" : "",
+        "expression" : "lyric_words",
+        "object" : "lyric_words",
+        "preview" : 0,
+        "totalObservations" : 15337,
+        "variables" : 6
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1558985471192.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "91EEE61C",
+    "lastKnownWriteTime" : 1558982569,
+    "last_content_update" : 1558985471192,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "AABCA428",
+        "caption" : "lyrics_decade_count",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=lyrics_decade_count&cache_key=AABCA428",
+        "displayedObservations" : 15337,
+        "environment" : "",
+        "expression" : "lyrics_decade_count",
+        "object" : "lyrics_decade_count",
+        "preview" : 0,
+        "totalObservations" : 15337,
+        "variables" : 3
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

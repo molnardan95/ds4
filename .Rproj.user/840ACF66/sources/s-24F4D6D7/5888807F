@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556734900156.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5888807F",
+    "lastKnownWriteTime" : 1559144837,
+    "last_content_update" : 1559145391482,
+    "path" : "C:/Users/molna/Desktop/CEU/Unstructured Text Analysis/Billboard/Data_Pull.R",
+    "project_path" : "Data_Pull.R",
+    "properties" : {
+        "cursorPosition" : "388,0",
+        "scrollLine" : "360",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
