@@ -16,7 +16,7 @@ __Table of contents:__
 * Summary
 * Afterword
 
-## Goal of the analysis
+## Goal of the analysis 
 
 The goal of my analysis was to determine what makes a song popular from a linguistic point of view.
 
