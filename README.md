@@ -1,14 +1,14 @@
 # Text and Sentiment Analysis of The Most Popular songs of the last 50 years
 
-This was a term project for the _Data Science 4: Unstructured Text Analysis_ course at the Business Analytics masters at the Central European University of Budapest. The projects aim is to identify topics, keywords and sentiments that result in the most popular songs.
+This was a term project for the _Data Science 4: Unstructured Text Analysis_ course at the Business Analytics masters at the Central European University of Budapest. The project's aim is to identify topics, keywords and sentiments that result in the most popular songs.
 
 __Table of contents:__
 
 * Goal of the analysis
 * About the Data
 * Packages used
-* Term Frequency
-  * Most used terms
+* Term Frequency Analysis
+  * Most frequently used terms
   * Trends
   * TF-IDF
 * Sentiment analysis
@@ -20,7 +20,7 @@ __Table of contents:__
 
 The goal of my analysis was to determine what makes a song popular from a linguistic point of view.
 
-When I originally came up with the idea, that I want to analyse lyrics, I thought it would be interesting to see difference in genres, but than I thought about how my music consumption changed over time. My favorite songs talk about very different topics nowadays than 5-10 years ago. Is it just me, who while growing up started to listen to all kinds of different music, with deeper meaning, or it's a general trend we can see over time? Do the most popular songs always talk about the same things, or do they have different topics? Do these topics change over time? Could we maybe use text analysis to come up with a song ourselves?
+When I originally came up with the idea that I want to analyse lyrics, I thought it would be interesting to see difference in genres, but than I thought about how my music consumption changed over time. My favorite songs talk about very different topics nowadays than 5-10 years ago. Is it just me, who while growing up started to listen to all kinds of different music, with deeper meaning, or it's a general trend we can see over time? Do the most popular songs always talk about the same things, or do they have different topics? Do these topics change over time? Could we maybe use text analysis to come up with a song ourselves?
 
 These are the questions that I would like to answer using the methods I acquired in class.
 
@@ -50,7 +50,7 @@ The first step of this process is looking at the words which were used the most.
 
 ![alt text](https://github.com/molnardan95/ds4/blob/master/Charts/most_frequent_words.png)
 
-As we can see on the chart above, the most frequent words are all - somewhat - related to one topic, which is relationships, more specifically "love". If we were to extend the selection, we would also get words like "dance", "heart" and some others, but the general topic doesn't change much. It's mostly boys and girls wanting each other. 
+As we can see on the chart above, the most frequent words are all - somewhat - related to one topic, which is relationships, more specifically "love". If we were to extend the selection, we would also get words like "dance", "heart" and some others, but the general topic doesn't change much. It's mostly boys and girls and their feelings for each other. 
 
 ### Trends
 
@@ -58,11 +58,11 @@ Let's see if this changes if we include a time dimension.
 
 ![alt text](https://github.com/molnardan95/ds4/blob/master/Charts/most_frequent_words_by_decade.png)
 
-The answer is no! We see some slight differences, however these are very minor. There are some new words surfacing, such as "hey" or "hot", but these are still related to the same topic in the examined songs. 
+The answer is not really! We see some slight differences, however these are very minor. There are some new words surfacing, such as "hey" or "hot", but these are still related to the same topic in the examined songs. 
 
-A very interesting case is the word "ron" in the 1970s. There are two songs which contain this word a lot of times, "Da Doo Ron Ron" by Shaun Cassidy and "Bad Blood" by Neil Sedaka. In neither of these songs does this word have any meaning, it's more of a playful word that is mentioned so many times, that it made it to the toplist in that decade.
+A very interesting case is the word "ron" in the 1970s. There are two songs which contain this word a lot of times, "Da Doo Ron Ron" by Shaun Cassidy and "Bad Blood" by Neil Sedaka. In neither of these songs does this word have any meaning, it's more of a playful word that is mentioned so many times that it made it to the toplist in that decade.
 
-One thing we can say for sure, is that the most frequently used words did not change much over the years, and that they cover one or two very simple, easy to understand topic that everyone can relate to. 
+One thing we can say for sure is that the most frequently used words did not change much over the years, and that they cover one or two very simple, easy to understand topic that everyone can relate to. 
 
 ![alt text](https://github.com/molnardan95/ds4/blob/master/Charts/most_frequent_words_wordcloud.png)
 
@@ -74,7 +74,7 @@ By looking at the TF_IDF values for each words by decade, we can identify those 
 
 ![alt text](https://github.com/molnardan95/ds4/blob/master/Charts/tf_idf_words_in_decades.png)
 
-Again, it seems like that we can't generalize a distinct topic for any of the decades. We can infere a couple of interestingthings however. In the 70s and 80s, mentioning peoples names were more frequent, that's why we see names like "diana", "sara", "louie" and such in these decades. In the later decades after 2000, more swear words are used, such as "shit" or "fuckin". Also, we identify some well know songs from these centuries, such as "Uptown Funk" by Bruno Mars in the 2010s, "Womanizer" by Britney Spears in the 2000s and "Macarena" in the 90s. 
+Again, it seems like that we can't generalize a distinct topic for any of the decades. We can infere a couple of interesting things however. In the 70s and 80s, mentioning peoples names were more frequent, that's why we see names like "diana", "sara", "louie" and such in these decades. In the later decades after 2000, more swear words are used, such as "shit" or "fuckin". Also, we identify some well known songs from these centuries, such as "Uptown Funk" by Bruno Mars in the 2010s, "Womanizer" by Britney Spears in the 2000s and "Macarena" in the 90s. 
 
 Other than these, the tf-idf analysis seems to confirm that popular music didn't change much over time. 
 
@@ -102,7 +102,7 @@ It is quiet consistent with less "love" and more "bad" lately.
 
 ## Topic modeling
 
-So is there anything that makes anything unique at all? Are these songs all just the sam at the end of the day. There is a very slight shift in words used and sentiment, but based on all of the above, I started to highly doubt that people listen to different music now then 50 years ago. Topic modeling is our last hope.
+So is there anything that makes anything unique at all? Are these songs all just the same at the end of the day. There is a very slight shift in words used and sentiment, but based on all of the above, I started to highly doubt that people listen to different music now then 50 years ago. Topic modeling is our last hope.
 
 The easiest choice for me was to make the LDA function create 2 distinct topics out of all the words used. If the 2 topics are very similar, creating more topics won't enhance my analysis any further.
 
@@ -117,7 +117,7 @@ One interesting thing is that the function did group together the two latest dec
 
 ## Summary
 
-I started out with the intention to see what are the topics, words nd sentiments which make a song pouplar. To answer these questions, I used the songs that lead the Hot 100 Billboard list over the last ~50 years. It turns out, that most popular songs are very similar to each other. All they talk about is love, girls, and relationships in general with very simple words used most of the time. Even though there is some noticable change in sentiment that could be mostly due to the change in words when these artists sing about this topic.
+I started out with the intention to see what are the topics, words and sentiments which make a song pouplar. To answer these questions, I used the songs that lead the Hot 100 Billboard list over the last ~50 years. It turns out, that most popular songs are very similar to each other. All they talk about is love, girls, and relationships in general with very simple words used most of the time. Even though there is some noticable change in sentiment that could be mostly due to the change in words when these artists sing about this topic.
 
 So is this all you need? Just use some simple words about love, make them rhyme and success will follow? Well, probably it is not enough. You will also need a cathy tune, and an artist who can deliver such high quality, but picking words from the results of this analysis could definitely be a good start to make it big on the Hot 100 list, to be the most popular.
 
@@ -127,12 +127,3 @@ So is this all you need? Just use some simple words about love, make them rhyme 
 It is important to mention the bias in my analysis. There could be more thorough analysis done if I were to include not just the top 1 songs of each week from this list, but downloaded the top 10/50/100. I imagine that the result would be slightly different. Also, I only used the songs that were on the top of this one specific toplist. Other toplists might have different songs leading the charts, from maybe more diverse genres. 
 
 In the end, it does makes sense that the most popular songs are about a topic - love - that almost everyone can relate to, as all of us have experienced a feeling similar to it. 
-
-
-
-
-
-
-
-
-
