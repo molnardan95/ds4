@@ -155,6 +155,8 @@ ggsave("Charts/most_frequent_words_by_decade.png", width=12, height=7.5)
 # If we look at it by decade, we see very similar trends
 # Even though some new words get introduced, the  ain ones look to be the same
 # Can we draw the conclusion, that this is the winning receipt? Not so fast.
+test <- lyrics %>% 
+  filter(word == "ron")
 
 #wordcloud
 lyrics %>% 
@@ -301,7 +303,7 @@ year_term_count %>%
   geom_smooth() +
   facet_wrap(~ word, scales = "free_y") +
   scale_y_continuous(labels = scales::percent_format()) +
-  ylab("% frequency of word in inaugural address")
+  ylab("% frequency of word in year")
 ggsave("Charts/usage_trend_most_frequent_words.png", width=12, height=7.5)
 
 # Looking at those contributing most to the sentiment
@@ -312,7 +314,7 @@ year_term_count %>%
   geom_smooth() +
   facet_wrap(~ word, scales = "free_y") +
   scale_y_continuous(labels = scales::percent_format()) +
-  ylab("% frequency of word in inaugural address")
+  ylab("% frequency of word in year")
 ggsave("Charts/usage_trend_most_sentimental_words.png", width=12, height=7.5)
 
 # Ones with high tf/idf - useless
