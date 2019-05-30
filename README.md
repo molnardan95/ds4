@@ -12,6 +12,7 @@ __Table of contents:__
   * Trends
   * TF-IDF
 * Sentiment analysis
+* Topic Modeling
 * Summary
 * Afterthoughts
 
@@ -78,6 +79,46 @@ Again, it seems like that we can't generalize a distinct topic for any of the de
 Other than these, the tf-idf analysis seems to confirm that popular music didn't change much over time. 
 
 ## Sentiment Analysis
+
+So did the sentiment change at least? Do we see any general trends of decades where the sentiment was better? Can we see a general decline or improvement?
+
+![alt text](https://github.com/molnardan95/ds4/blob/master/Charts/decade_sentiment.png)
+
+Using the BING lexicon for sentiment analysis, we do see some kind of a decline in general. To make sure that this is true, I used the 3 most frequently used sentiment lexicons, to see if this trend could be something that's actually real, or is there some bias in the lexicon itself.
+
+![alt text](https://github.com/molnardan95/ds4/blob/master/Charts/sentiment_all_3_packages.png)
+
+It seems like there is such a trend. Sentiment seems to be going down over time. Does that mean that people listen to more negtaive music in the new millenia? Well, sort of. While I was trying to identify what is causeing this shift in sentiment I came to two conclusions.
+
+![alt text](https://github.com/molnardan95/ds4/blob/master/Charts/sentiment_contributor_words2.png)
+
+First, there does seem to be a downward trend, but it might not be so significant as it is on the previous chart. The reason for that - which was my second observation - is that songs use language like "wild", "shake", "crazy" and "shit" more often lately and these words are not always used in a negative context. 
+
+Lastly we can also check how the distribution of the words with the most effect on sentiment changed over time on the below chart.
+
+![alt text](https://github.com/molnardan95/ds4/blob/master/Charts/usage_trend_most_sentimental_words.png)
+
+It is quiet consistent with less "love" and more "bad" lately. 
+
+## Topic modeling
+
+So is there anything that makes anything unique at all? Are these songs all just the sam at the end of the day. There is a very slight shift in words used and sentiment, but based on all of the above, I started to highly doubt that people listen to different music now then 50 years ago. Topic modeling is our last hope.
+
+The easiest choice for me was to make the LDA function create 2 distinct topics out of all the words used. If the 2 topics are very similar, creating more topics won't enhance my analysis any further.
+
+![alt text](https://github.com/molnardan95/ds4/blob/master/Charts/decade_topic_modeling.png)
+
+To the surprise of no one at this point, the two topics that were created are essentially the same. There are some slight differences, but most of the frequent words are the same. It's nothing but love throughout the centuries. 
+
+One interesting thing is that the function did group together the two latest decades into one of the topics and the earliest three decades into the other one. We can see the most unique words in these two distinct topics, and we can identify similar things to what we have previously. There are some songs standing out, that make these decades different from each other, but they are still very very similar to each other.
+
+![alt text](https://github.com/molnardan95/ds4/blob/master/Charts/topic_unique_words.png)
+
+
+## Summary
+
+
+
 
 
 
