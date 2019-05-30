@@ -14,7 +14,7 @@ __Table of contents:__
 * Sentiment analysis
 * Topic Modeling
 * Summary
-* Afterthoughts
+* Afterword
 
 ## Goal of the analysis
 
@@ -117,7 +117,16 @@ One interesting thing is that the function did group together the two latest dec
 
 ## Summary
 
+I started out with the intention to see what are the topics, words nd sentiments which make a song pouplar. To answer these questions, I used the songs that lead the Hot 100 Billboard list over the last ~50 years. It turns out, that most popular songs are very similar to each other. All they talk about is love, girls, and relationships in general with very simple words used most of the time. Even though there is some noticable change in sentiment that could be mostly due to the change in words when these artists sing about this topic.
 
+So is this all you need? Just use some simple words about love, make them rhyme and success will follow? Well, probably it is not enough. You will also need a cathy tune, and an artist who can deliver such high quality, but picking words from the results of this analysis could definitely be a good start to make it big on the Hot 100 list, to be the most popular.
+
+
+## Afterword
+
+It is important to mention the bias in my analysis. There could be more thorough analysis done if I were to include not just the top 1 songs of each week from this list, but downloaded the top 10/50/100. I imagine that the result would be slightly different. Also, I only used the songs that were on the top of this one specific toplist. Other toplists might have different songs leading the charts, from maybe more diverse genres. 
+
+In the end, it does makes sense that the most popular songs are about a topic - love - that almost everyone can relate to, as all of us have experienced a feeling similar to it. 
 
 
 
