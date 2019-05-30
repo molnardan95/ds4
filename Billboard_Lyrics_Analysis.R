@@ -104,7 +104,7 @@ rm(list = setdiff(ls(), "tokenized_lyrics"))
 tokenized_lyrics <- read.csv("Billboard_1970_2018_Tokenized_Lyrics.csv")
 tokenized_lyrics <- tokenized_lyrics %>% na.omit()
 
-# Cretae the Decade variable
+# Create the Decade variable
 tokenized_lyrics <- tokenized_lyrics %>% 
   mutate(decade = ifelse(year >= 2010, "2010s",
                          ifelse(year >= 2000, "2000s",
@@ -131,6 +131,7 @@ lyrics %>%
   geom_bar(stat = "identity") +
   ylab("Number of Occurences") +
   xlab("Word")
+ggsave("Charts/most_frequent_words.png", width=12, height=7.5)
 
 # Let's see what the most used words are
 # It looks like the most used words are related to love, girls, feelings and night
@@ -149,6 +150,7 @@ decade_count %>%
   facet_wrap(~decade, ncol = 2, scales = "free_x") +
   ylab("Number of Occurences") +
   xlab("Word")
+ggsave("Charts/most_frequent_words_by_decade.png", width=12, height=7.5)
 
 # If we look at it by decade, we see very similar trends
 # Even though some new words get introduced, the  ain ones look to be the same
@@ -170,6 +172,7 @@ sentiment <- lyrics %>%
 ggplot(sentiment, aes(year, sentiment, fill = decade)) +
   geom_col(show.legend = FALSE) +
   facet_wrap(~decade, ncol = 2, scales = "free_x")
+ggsave("Charts/decade_sentiment.png", width=12, height=7.5)
 
 # all 3 sentimkent packages
 
@@ -202,6 +205,7 @@ all_sentiments %>%
   ggplot(aes(year, sentiment, fill = method)) + 
   geom_col(show.legend = FALSE) +
   facet_wrap(~method, ncol = 1, scales = "free_y")
+ggsave("Charts/sentiment_all_3_packages.png", width=12, height=7.5)
 
 # Bing word counts
 
@@ -221,6 +225,7 @@ sentiment_word_counts %>%
   labs(y = "Contribution to sentiment",
        x = NULL) +
   coord_flip()
+ggsave("Charts/sentiment_contributor_words.png", width=12, height=7.5)
 
 # So what do we see in when looking into the sentiments. 
 # Overall, the music seems to be of positive sentiment. We know that these sentiment lexocons contain more negative than positive words,
@@ -251,6 +256,7 @@ lyric_words %>%
   labs(x = NULL, y = "tf-idf") +
   facet_wrap(~decade, ncol = 2, scales = "free") +
   coord_flip()
+ggsave("Charts/tf_idf_words_in_decades.png", width=12, height=7.5)
 
 # So far we have seen that throughout time, the words fdon't differ much. 
 # However, are all these songs the same after all? What makes each decade unique?
@@ -277,10 +283,8 @@ ap_sentiments %>%
   geom_bar(stat = "identity") +
   ylab("Contribution to sentiment") +
   coord_flip()
+ggsave("Charts/sentiment_contributor_words2.png", width=12, height=7.5)
 
-lyrics %>% 
-  group_by(word) %>% 
-  count(word, sort = TRUE)
 
 year_term_count <- lyrics %>% 
   group_by(year) %>% 
@@ -298,6 +302,7 @@ year_term_count %>%
   facet_wrap(~ word, scales = "free_y") +
   scale_y_continuous(labels = scales::percent_format()) +
   ylab("% frequency of word in inaugural address")
+ggsave("Charts/usage_trend_most_frequent_words.png", width=12, height=7.5)
 
 # Looking at those contributing most to the sentiment
 year_term_count %>%
@@ -308,6 +313,7 @@ year_term_count %>%
   facet_wrap(~ word, scales = "free_y") +
   scale_y_continuous(labels = scales::percent_format()) +
   ylab("% frequency of word in inaugural address")
+ggsave("Charts/usage_trend_most_sentimental_words.png", width=12, height=7.5)
 
 # Ones with high tf/idf - useless
 year_term_count %>%
@@ -340,6 +346,7 @@ topic_words %>%
   geom_col(show.legend = FALSE) +
   facet_wrap(~ topic, scales = "free") +
   coord_flip()
+ggsave("Charts/yearly_topic_modeling_2.png", width=12, height=7.5)
 
 # Same for Decades --------------------------------------------------------
 
@@ -367,6 +374,7 @@ decade_topic_words %>%
   geom_col(show.legend = FALSE) +
   facet_wrap(~ topic, scales = "free") +
   coord_flip()
+ggsave("Charts/decade_topic_modeling.png", width=12, height=7.5)
 
 # Topic modeling does nothing. It seems like the topic is always the same.
 # Same old boring topics are being brought up each and every year and decade
@@ -388,6 +396,7 @@ beta_spread %>%
   labs(y = "Uniqueness in Topic",
        x = NULL) +
   coord_flip()
+ggsave("Charts/topic_unique_words.png", width=12, height=7.5)
 
 # It seems like names are the differentiators mostly in topics. 
 
