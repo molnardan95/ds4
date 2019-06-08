@@ -4,17 +4,17 @@ This was a term project for the _Data Science 4: Unstructured Text Analysis_ cou
 
 __Table of contents:__
 
-* Goal of the analysis
-* About the Data
-* Packages used
-* Term Frequency Analysis
-  * Most frequently used terms
-  * Trends
-  * TF-IDF
-* Sentiment analysis
-* Topic Modeling
-* Summary
-* Afterword
+* [Goal of the analysis](#goal-of-the-analysis)
+* [About the Data](#about-the-data)
+* [Packages used](#packages-used)
+* [Term Frequency Analysis](#term-frequency-analysis)
+  * [Most frequently used terms](#most-frequently-used-terms)
+  * [Trends](#trends)
+  * [TF-IDF](#tf-idf)
+* [Sentiment analysis](#sentiment-analysis)
+* [Topic Modeling](#topic-modeling)
+* [Summary](#summary)
+* [Afterword](#afterword)
 
 ## Goal of the analysis 
 
